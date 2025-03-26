@@ -1,0 +1,20 @@
+{
+  "name": "nga",
+  "version": "1.0.0",
+  "description": "Website from backend to frontend, using MERN stack (Mongo-Express-React-NodeJs) Including bio, projects, cv and personal info.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolasgomezaragon/NGA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicolasgomezaragon/NGA/issues"
+  },
+  "homepage": "https://github.com/nicolasgomezaragon/NGA#readme"
+}
