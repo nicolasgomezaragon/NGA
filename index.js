@@ -1,6 +1,23 @@
 const express = require('express');
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const mongoose = require('mongoose')
+
+app.use(morgan('dev'));
+app.use(bodyParser.json());
+app.use(cors());
+
 const app = express();
-const port = 3000;
+
+require('dotenv').config();
+const port = process.env.PORT || 3000;
+
+mongoose.connect(process.env.MONGO_URI, 
+    {useNewUrlParser: true, useUnifiedTopology: true})
+    .then(() => console.log('MongoDB connected'))
+    .catch(err => console.error('MongoDB connection error:', err));
+
 
 app.get('/', (req,res) => {
     res.send('Hello world!')
@@ -21,4 +38,9 @@ app.get('/contact', (req,res) =>{
 app.listen(port, () => {
     console.log(`Server is running at https://localhost:${port}`);
 });
+
+app.use((err, req, res, next) =>{
+    console.error(err.stack);
+    res.status(500).send('Something broke!');
+})
 

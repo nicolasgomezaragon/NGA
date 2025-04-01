@@ -1,4 +1,4 @@
 # NGA Website
-Website from backend to frontend, using MERN stack (Mongo-Express-React-NodeJs)
+Personal website with MERN stack.
 Including bio, projects, cv and personal info.
 
